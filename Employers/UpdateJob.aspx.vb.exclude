@@ -1,0 +1,155 @@
+﻿Imports System.Data
+
+Partial Class Employers_UpdateJob
+    Inherits System.Web.UI.Page
+
+
+
+    Private _JobID As Integer
+    Private Property JobID() As Integer
+        Get
+            Return _JobID
+        End Get
+        Set(ByVal value As Integer)
+            _JobID = value
+        End Set
+    End Property
+
+    Public Sub GetJobType()
+
+        ddlJobType.DataSource = cJob.getJobTypes()
+        ddlJobType.DataValueField = "JobTypeID"
+        ddlJobType.DataTextField = "JobType"
+        ddlJobType.DataBind()
+
+    End Sub
+
+    Public Sub GetOccupation()
+
+        ddlOccupation.DataSource = cOccupation.GetAllOccupations()
+        ddlOccupation.DataValueField = "OccupationID"
+        ddlOccupation.DataTextField = "Occupation"
+        ddlOccupation.DataBind()
+
+    End Sub
+
+    Public Sub GetCompany()
+
+        ddlCompany.DataSource = cCompany.getCompanyByEmployer(Session("UserObject"))
+
+        ddlCompany.DataValueField = "CompanyID"
+        ddlCompany.DataTextField = "CompanyName"
+        ddlCompany.DataBind()
+
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        JobID = Session("JobID")
+        If Not Page.IsPostBack Then
+            Try
+                GetJobType()
+                GetOccupation()
+                GetCompany()
+                populateJobDetails()
+
+            Catch ex As Exception
+                cLogging.AddLog("Job Details could not be retrieved or populated.", Session("UserIP"), cLogging.LogType.SYSTEM_LOG, Session.SessionID, Session("UserID"), Session("UserType"), Request.ServerVariables("AUTH_USER"))
+
+            End Try
+        End If
+
+
+
+    End Sub
+
+    Private Sub populateJobDetails()
+
+        Dim dtJobDetails As New DataTable
+        Dim dr As DataRow
+
+        'Try
+
+        dtJobDetails = cJob.getJobDetailsByJobID(Session("JobID"))
+        If dtJobDetails.Rows.Count > 0 Then
+
+            For Each dr In dtJobDetails.Rows
+
+                txtJobTitle.Text = dr("Title")
+
+                If Not dr("Description").ToString = "" Then
+                    txtDescribtion.Text = dr("Description")
+                End If
+
+                If Not dr("Requirements").ToString = "" Then
+                    txtRequirements.Text = dr("Requirements")
+                End If
+
+
+                txtJobPosted.Text = dr("DatePosted")
+                txtClosingDate.Text = dr("ClosingDate")
+                txtStartingDate.Text = dr("StartDate")
+
+                If Not dr("EndDate").ToString = "" Then
+                    txtEndingDate.Text = dr("EndDate")
+                End If
+
+                If Not dr("NoRequestedEmployees").ToString = "" Then
+                    txtNoEmp.Text = dr("NoRequestedEmployees")
+                End If
+
+                txtJobStatus.Text = dr("JobStatus")
+
+                'ddlJobType.SelectedIndex = ddlJobType.Items.IndexOf(ddlJobType.Items.FindByText(dr("JobType")))
+                ddlJobType.SelectedValue = dr("JobType")
+                ddlOccupation.SelectedValue = dr("Occupation")
+                ddlCompany.SelectedValue = dr("CompanyID")
+
+            Next
+
+        Else
+            cLogging.AddLog("Job Details could not be retrieved or populated.", Session("UserIP"), cLogging.LogType.SYSTEM_LOG, Session.SessionID, Session("UserID"), Session("UserType"), Request.ServerVariables("AUTH_USER"))
+
+        End If
+
+    End Sub
+
+    Protected Sub btnEdit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEdit.Click
+
+        ddlCompany.Enabled = True
+        ddlJobType.Enabled = True
+        ddlOccupation.Enabled = True
+        ddlCompany.Enabled = False
+
+        txtDescribtion.ReadOnly = False
+        txtRequirements.ReadOnly = False
+        txtClosingDate.ReadOnly = False
+        txtEndingDate.ReadOnly = False
+        txtStartingDate.ReadOnly = False
+        txtNoEmp.ReadOnly = False
+
+
+        btnSave.Visible = True
+
+    End Sub
+
+    Protected Sub btnSave_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSave.Click
+
+        Dim dt As DataTable = cJob.getJobByID(Session("JobID"))
+        Dim jobObject = New cJob(dt)
+        jobObject.ParseDataTableDetails(dt)
+
+        Dim Employer As cUser = Session("UserObject")
+
+        Dim StartDate As Date = CDate(txtStartingDate.Text)
+        Dim EndDate As Date = CDate(txtEndingDate.Text)
+        Dim ClosingDate As Date = CDate(txtClosingDate.Text)
+
+        If ((StartDate > EndDate) Or (ClosingDate < StartDate)) Then
+            jobObject.updateJob(txtDescribtion.Text, txtRequirements.Text, ClosingDate, StartDate, EndDate, ddlOccupation.SelectedValue, ddlJobType.SelectedValue, txtNoEmp.Text, jobObject.JobID)
+        Else
+            lblInvalidDate.Visible = True
+        End If
+
+    End Sub
+
+End Class

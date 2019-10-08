@@ -1,0 +1,319 @@
+<%@ Page Title="" Language="VB" MasterPageFile="~/Employers/EmployerMasterPage.master" AutoEventWireup="false" CodeFile="UpdateJob.aspx.vb"   Inherits="Employers_UpdateJob" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <table style="width:100%;">
+        <tr>
+            <td colspan="3">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                                    <asp:Label ID="lblUpdateJob" runat="server" CssClass="TextTitle" 
+                                        Text="Job Post Details"></asp:Label>
+                                </td>
+        </tr>
+        <tr>
+            <td style="width: 317px; height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+            <td style="height: 23px">
+                </td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+               <b>
+                <asp:Label ID="lblCompanyDetails" runat="server" CssClass="TextSubTitle" 
+                                        Text="Company Details"></asp:Label></b>     
+                                </td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px; height: 23px;">
+                <asp:Label ID="lblCompany" runat="server" CssClass="BlueText" Text="Select Company:" 
+                    ToolTip="Company Name"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                <asp:DropDownList ID="ddlCompany" runat="server" CssClass="TextBox" 
+                    Enabled="False" Width="150px">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvCompany" runat="server" 
+                    ErrorMessage="Company Required" ToolTip="Company Required." 
+                    ControlToValidate="ddlCompany"><img  src="../Images/Icons/Warning_Small.png" /></asp:RequiredFieldValidator>
+            </td>
+            <td style="height: 23px">
+                </td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+               <b>
+                <asp:Label ID="lblJobDetails" runat="server" CssClass="TextSubTitle" 
+                                        Text="Job Details"></asp:Label></b>     
+            </td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                <asp:Label ID="lblJobTitle" runat="server" CssClass="BlueText" Text="Job Title:" 
+                    ToolTip="Job Title"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtJobTitle" runat="server" MaxLength="30" 
+                    Width="253px" CssClass="TextBox" ReadOnly="True"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvTitle" runat="server" 
+                    ErrorMessage="Job Title Required" ToolTip="Job Title Required" 
+                    ControlToValidate="txtJobTitle"><img  src="../Images/Icons/Warning_Small.png" /></asp:RequiredFieldValidator>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                <asp:Label ID="lblJobDescribtion" runat="server" CssClass="BlueText" Text="Job Describtion:" 
+                    ToolTip="Job Describtion"></asp:Label>
+            </td>
+            <td>
+               <asp:TextBox ID="txtDescribtion" runat="server" Height="90px" MaxLength="100" 
+                    TextMode="MultiLine" Width="251px" CssClass="TextBox" ReadOnly="True"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revDescribtion" runat="server" 
+                    ErrorMessage="Invalid Job Describtion Entry" 
+                    ValidationExpression="[0-9a-zA-Z\-\s]+" ValidationGroup="2" 
+                    ControlToValidate="txtDescribtion" ToolTip="Invalid Job Describtion"><img src="../Images/Icons/ErrorCircle_Small.png"/></asp:RegularExpressionValidator>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                <asp:Label ID="lblJobRequirements" runat="server" CssClass="BlueText" Text="Job Requirements:" 
+                    ToolTip="Job Requirements"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtRequirements" runat="server" Height="90px" MaxLength="100" 
+                    TextMode="MultiLine" Width="250px" CssClass="TextBox" ReadOnly="True"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revAddress0" runat="server" 
+                    ErrorMessage="Invalid Requirements Entry" 
+                    ValidationExpression="[0-9a-zA-Z\-\s]+" ValidationGroup="2" 
+                    ControlToValidate="txtRequirements" ToolTip="Invalid Requirements"><img src="../Images/Icons/ErrorCircle_Small.png"/></asp:RegularExpressionValidator>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                <asp:Label ID="lblDatePosted" runat="server" CssClass="BlueText" Text="Date Posted:" 
+                    ToolTip="Date Posted"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtJobPosted" runat="server" CssClass="TextBox" Width="150px" 
+                    ReadOnly="True"></asp:TextBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 317px">
+                <asp:Label ID="lblClosingDate" runat="server" CssClass="BlueText" Text="Post Closing Date:" 
+                    ToolTip="Post Closing Date"></asp:Label>
+            </td>
+            <td style="font-weight: 700">  
+                <asp:TextBox ID="txtClosingDate" runat="server" style="margin-bottom: 0px" 
+                    Width="150px" ReadOnly="True" CssClass="TextBox"></asp:TextBox>
+                <cc1:CalendarExtender ID="txtClosingDate_CalendarExtender" runat="server" 
+                    Enabled="True" Format="MM/dd/yyyy" PopupButtonID="imgClosing" 
+                    TargetControlID="txtClosingDate">
+                </cc1:CalendarExtender>
+                <cc1:MaskedEditExtender ID="txtClosingDate_MaskedEditExtender" runat="server" 
+                    CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" 
+                    CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" 
+                    CultureThousandsPlaceholder="" CultureTimePlaceholder="" Enabled="True" 
+                    Mask="99/99/9999" MaskType="Date" TargetControlID="txtClosingDate">
+                </cc1:MaskedEditExtender>
+                <asp:Image ID="imgClosing" runat="server" 
+                                                    
+                    ImageUrl="~/Images/Icons/Calendar_Small.png" ToolTip="Calendar" Visible="False" 
+                    Width="25px" />
+                                                        </td>
+            
+            
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblJobStartingDate" runat="server" CssClass="BlueText" Text="Job Starting Date:" 
+                    ToolTip="Job Starting Date"></asp:Label>
+            </td>
+            <td style="height: 23px">  
+            
+                                                    <asp:TextBox ID="txtStartingDate" runat="server" ReadOnly="True" 
+                                                        CssClass="TextBox" Width="150px"></asp:TextBox>
+                                                    <cc1:CalendarExtender ID="txtStartingDate_CalendarExtender" runat="server" 
+                                                        Format="MM/dd/yyyy" PopupButtonID="imgStarting" 
+                                                        TargetControlID="txtStartingDate">
+                                                    </cc1:CalendarExtender>
+                                                    <cc1:MaskedEditExtender ID="txtStartingDate_MaskedEditExtender" runat="server" 
+                                                        Mask="99/99/9999" MaskType="Date" TargetControlID="txtStartingDate">
+                                                    </cc1:MaskedEditExtender>
+                                                    <asp:Image ID="imgStarting" runat="server" 
+                                                    ImageUrl="~/Images/Icons/Calendar_Small.png" ToolTip="Calendar" 
+                                                        Visible="False" Width="25px" />
+                                                        </td>
+            <td style="height: 23px">
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblJobEndingDate" runat="server" CssClass="BlueText" Text="Job Ending Date:" 
+                    ToolTip="Job Ending Date"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                                                    <asp:TextBox ID="txtEndingDate" runat="server" ReadOnly="True" 
+                                                        CssClass="TextBox" Width="150px"></asp:TextBox>
+                                                    <cc1:CalendarExtender ID="txtEndingDate_CalendarExtender" runat="server" 
+                                                        Format="MM/dd/yyyy" PopupButtonID="imgEnding" TargetControlID="txtEndingDate">
+                                                    </cc1:CalendarExtender>
+                                                    <cc1:MaskedEditExtender ID="txtEndingDate_MaskedEditExtender" runat="server" 
+                                                        Mask="99/99/9999" MaskType="Date" TargetControlID="txtEndingDate">
+                                                    </cc1:MaskedEditExtender>
+                                                    <asp:Image ID="imgEnding" runat="server" 
+                                                    ImageUrl="~/Images/Icons/Calendar_Small.png" ToolTip="Calendar" 
+                                                        Visible="False" Width="25px" />
+                                                        </td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblOccupation" runat="server" CssClass="BlueText" Text="Occupation:" 
+                    ToolTip="Occupation"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                <asp:DropDownList ID="ddlOccupation" runat="server" Enabled="False" 
+                    CssClass="TextBox" Width="150px">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvOccupation" runat="server" 
+                    ErrorMessage="Occupation Required" ToolTip="Occupation Required." 
+                    ControlToValidate="ddlOccupation"><img  src="../Images/Icons/Warning_Small.png" /></asp:RequiredFieldValidator>
+            </td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblJobType" runat="server" CssClass="BlueText" Text="Job Type:" 
+                    ToolTip="Job Type"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                <asp:DropDownList ID="ddlJobType" runat="server" Enabled="False" 
+                    CssClass="TextBox" Width="150px">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvJobType" runat="server" 
+                    ErrorMessage="Job Type Required" ToolTip="Job Type Required." 
+                    ControlToValidate="ddlJobType"><img  src="../Images/Icons/Warning_Small.png" /></asp:RequiredFieldValidator>
+            </td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblNoEmployees" runat="server" CssClass="BlueText" Text="Number of Requested Employees:" 
+                    ToolTip="Number of Requested EMployees"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                <asp:TextBox ID="txtNoEmp" runat="server" Width="150px" CssClass="TextBox"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="revNoEmp" runat="server" 
+                    ErrorMessage="Invalid Number of Employees" 
+                    ValidationExpression="[0-9]+" ValidationGroup="2" 
+                    ControlToValidate="txtNoEmp" ToolTip="Invalid Number of Employees"><img src="../Images/Icons/ErrorCircle_Small.png"/></asp:RegularExpressionValidator>
+            </td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                <asp:Label ID="lblJobStatus" runat="server" CssClass="BlueText" Text="Job Status:" 
+                    ToolTip="Job Status"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                <asp:TextBox ID="txtJobStatus" runat="server" Width="150px" CssClass="TextBox" 
+                    ReadOnly="True"></asp:TextBox>
+                </td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                &nbsp;</td>
+            <td style="height: 23px">
+                &nbsp;</td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                </td>
+            <td style="height: 23px">
+                <asp:Label ID="lblInvalidDate" runat="server" CssClass="RedText" 
+                    Text="Please note that the End Date is prior to the Start date" Visible="False"></asp:Label>
+            </td>
+            <td style="height: 23px">
+                </td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                &nbsp;</td>
+            <td style="height: 23px">
+                &nbsp;</td>
+            <td style="height: 23px">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 23px; width: 317px">
+                </td>
+            <td style="height: 23px">
+                  <asp:Button ID="btnEdit" runat="server" Text="Edit" 
+                    CssClass="ButtonLightBlue" Width="100px" />
+                  &nbsp;<asp:Button ID="btnSave" runat="server" Text="Save Updates" 
+                    CssClass="ButtonLightBlue" Width="100px" Visible="False" />
+                </td>
+            <td style="height: 23px">
+                </td>
+        </tr>
+    </table>
+</asp:Content>
+
