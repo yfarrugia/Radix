@@ -1,0 +1,79 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="logtest.aspx.vb" Inherits="LukeTestnigFolder_logtest" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>This is a log test page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <table>
+            <tr>
+                <td>
+                    <asp:Label ID="Label1" runat="server" Text="Enter Plain Text"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtPlain" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label2" runat="server" Text="Hashed Text"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblHash" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="btnHash" runat="server" Text="Hash" />
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+    
+        <br />
+    
+        <table>
+            <tr>
+                <td>
+                    <asp:Label ID="Label3" runat="server" Text="Saved Hash"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtSavedHash" runat="server" Width="500px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label4" runat="server" Text="Given Plain Text"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtGivenPlainText" runat="server" Width="500px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="btnCheck" runat="server" Text="Check" />
+                </td>
+                <td>
+                    <asp:Label ID="lblResult" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    </form>
+</body>
+</html>

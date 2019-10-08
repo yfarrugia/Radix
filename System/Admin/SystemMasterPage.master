@@ -1,0 +1,160 @@
+﻿<%@ Master Language="VB" CodeFile="SystemMasterPage.master.vb" Inherits="System_SystemMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../../Styles.css" rel="stylesheet" type="text/css" />
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body marginwidth="0" marginheight="0">
+    <form id="form1" runat="server">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td bgcolor="#606A79" height="40">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <table style="width:100%;">
+                        <tr>
+                            <td align="left" valign="bottom">
+                                &nbsp;</td>
+                            <td align="right" class="Text" valign="bottom">
+                                <asp:Label ID="Label2" runat="server" CssClass="Text" ForeColor="White" 
+                                    Text="Logged In As:"></asp:Label>
+&nbsp;<asp:LoginName ID="UserLoginName" runat="server" CssClass="Text" ForeColor="White" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                &nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="Label1" runat="server" Text="System Administration Panel" 
+                                    CssClass="Text" Font-Size="16pt" ForeColor="White" Font-Names="Calibri"></asp:Label>
+                            </td>
+                            <td align="right">
+                                <asp:LinkButton ID="lnkSignout" runat="server" CssClass="Link" 
+                                    ForeColor="#CCCCCC">Sign Out</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="100%">
+                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left" valign="top" width="215" bgcolor="#f4f4f4" 
+                                class="NavigationBackground" style="padding-left:10px;" rowspan="3">
+                                <br />
+                                <asp:LinkButton ID="lnkCollapse" runat="server" CssClass="Link" 
+                                    ForeColor="#666666">Collapse All</asp:LinkButton>
+                                <asp:LinkButton ID="lnkExpand" runat="server" CssClass="Link" 
+                                    ForeColor="#666666" Visible="False">Expand All</asp:LinkButton>
+                <asp:TreeView ID="TreeView1" runat="server" NodeIndent="25" ImageSet="Msdn">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="False" Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="False" CssClass="BlueTextBold" 
+                        Font-Bold="True" Font-Italic="False" />
+                    <Nodes>
+                        <asp:TreeNode NavigateUrl="~/System/SystemDefault.aspx" Text="My Desk" 
+                            Value="My Desk" ToolTip="My Desk"></asp:TreeNode>
+                        <asp:TreeNode Text="Administration" Value="Administration" 
+                            SelectAction="Expand" ToolTip="Administration">
+                            <asp:TreeNode Text="System Accounts" Value="Administrators" 
+                                SelectAction="Expand" ToolTip="System Accounts">
+                                <asp:TreeNode Text="Create Account" Value="Create Account" 
+                                    NavigateUrl="~/System/Admin/CreateSystemAccount.aspx" ToolTip="Create Account"></asp:TreeNode>
+                                <asp:TreeNode Text="System Administrator" Value="System Admin" 
+                                    ToolTip="System Administrator" NavigateUrl="~/System/Admin/ManageAdmins.aspx">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="System Support" Value="System Support" 
+                                    ToolTip="System Support" NavigateUrl="~/System/Admin/ManageSupport.aspx">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Manage Flags" Value="Manage Flags" SelectAction="Expand" 
+                                ToolTip="Manage Flags">
+                                <asp:TreeNode Text="Flagged Users" Value="Flagged Users" 
+                                    NavigateUrl="~/System/Admin/FlaggedUsers.aspx" ToolTip="Flagged Users"></asp:TreeNode>
+                                <asp:TreeNode Text="Flagged Job Reviews" Value="Flagged Job Reviews" 
+                                    NavigateUrl="~/System/Admin/ModerateReviews.aspx" 
+                                    ToolTip="Flagged Job Reviews">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Pending Activation" Value="Pending Activation" 
+                                SelectAction="Expand" ToolTip="Pending Activation">
+                                <asp:TreeNode Text="Companies" Value="Companies" 
+                                    NavigateUrl="~/System/Admin/PendingCompanies.aspx" ToolTip="Companies"></asp:TreeNode>
+                                <asp:TreeNode Text="Centers" Value="Centers" 
+                                    NavigateUrl="~/System/Admin/PendingCenters.aspx" ToolTip="Centers"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Approved Countries" Value="Approved Countries" 
+                                SelectAction="Expand" NavigateUrl="~/System/Admin/ApprovedCountries.aspx" 
+                                ToolTip="Approved Countries">
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Support" Value="Support" SelectAction="Expand" 
+                            ToolTip="Support">
+                            <asp:TreeNode Text="Ticket Management" Value="Ticket Management" 
+                                NavigateUrl="~/System/Admin/EscalatedTickets.aspx" 
+                                ToolTip="Ticket Management"></asp:TreeNode>
+                            <asp:TreeNode Text="Ticket History" Value="Ticket History" 
+                                NavigateUrl="~/System/TicketHistory.aspx" ToolTip="Ticket History"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="System" Value="System" SelectAction="Expand" 
+                            ToolTip="System">
+                            <asp:TreeNode Text="View Users" Value="View Users" 
+                                NavigateUrl="~/System/Admin/ViewAllUsers.aspx" ToolTip="View Users"></asp:TreeNode>
+                            <asp:TreeNode Text="View Logs" Value="View Logs" 
+                                NavigateUrl="~/System/Admin/ViewLogs.aspx" ToolTip="View Logs"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Message" Value="Message" SelectAction="Expand" 
+                            ToolTip="Message">
+                            <asp:TreeNode Text="Inbox" Value="Inbox" 
+                                NavigateUrl="~/AllRegisteredUsers/MessageInbox.aspx" ToolTip="Inbox"></asp:TreeNode>
+                            <asp:TreeNode Text="Compose" Value="Compose" 
+                                NavigateUrl="~/AllRegisteredUsers/CreateMessage.aspx" ToolTip="Compose"></asp:TreeNode>
+                        </asp:TreeNode>
+                    </Nodes>
+                    <NodeStyle 
+                        HorizontalPadding="10px" NodeSpacing="0px" VerticalPadding="0px" 
+                        CssClass="Text" />
+                </asp:TreeView>
+                                <br />
+                            </td>
+                            <td align="left" valign="top" width="5" rowspan="3">
+                                &nbsp;</td>
+                            <td align="left" valign="middle" height="10">
+                                <br />
+                                <asp:SiteMapPath ID="SiteMapPath2" runat="server" Font-Names="Verdana" 
+                        Font-Size="X-Small" PathSeparator=" : ">
+                                    <PathSeparatorStyle Font-Bold="True" ForeColor="#666666" />
+                                    <CurrentNodeStyle CssClass="currentnode" />
+                                    <NodeStyle Font-Bold="True" CssClass="node" />
+                                    <RootNodeStyle Font-Bold="True" CssClass="rootnode" />
+                                </asp:SiteMapPath>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top" height="500">
+                                
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top">
+                    <asp:Label ID="Label3" runat="server" CssClass="GrayText" 
+                        Text="Copyrights Radix Systems 2009. All Rights Reserved."></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            </table>
+    </form>
+</body>
+</html>

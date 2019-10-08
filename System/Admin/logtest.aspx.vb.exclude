@@ -1,0 +1,38 @@
+﻿
+Partial Class LukeTestnigFolder_logtest
+    Inherits System.Web.UI.Page
+
+    Private Sub SaveTestAndLogging()
+        Dim i As Integer
+        Try
+            Dim com As New System.Data.SqlClient.SqlCommand("INSERT INTO tblTESTLUKE VALUES ('TOBEDELETED') ")
+            i = cDBManager.SetReturnID(com)
+            Response.Write("Item: " & i)
+            cLogging.AddLog(i & " < inserted", Session("UserIP"), cLogging.LogType.ERROR_LOG, Session.SessionID, Session("UserID"), Session("UserType"), Request.ServerVariables("AUTH_USER"))
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Protected Sub btnHash_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnHash.Click
+        lblHash.Text = cHash.ComputeHash(txtPlain.Text)
+
+    End Sub
+
+    Protected Sub btnCheck_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCheck.Click
+        lblResult.Text = cHash.VerifyHash(txtGivenPlainText.Text, txtSavedHash.Text)
+        check()
+        Response.Write(Request.ServerVariables("AUTH_TYPE"))
+
+
+    End Sub
+
+    Private Function check() As Boolean
+        If lblResult.Text = True Then
+            cLogging.AddLog("Hash Verified", Session("UserIP"), cLogging.LogType.INFORMATION_LOG, Session.SessionID, Session("UserID"), Session("UserType"), Request.ServerVariables("AUTH_USER"))
+        Else
+            cLogging.AddLog("Wrong Hash", Session("UserIP"), cLogging.LogType.WARNING_LOG, Session.SessionID, Session("UserID"), Session("UserType"), Request.ServerVariables("AUTH_USER"))
+        End If
+    End Function
+
+End Class
