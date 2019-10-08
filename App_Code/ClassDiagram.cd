@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="cAuthorizationMessage">
+    <Position X="8" Y="7.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cAuthorizationMessage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cCenter" Collapsed="true">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQAEAAAAAAEIMAIWADFAACVICAAAmAiAAEEBAEIE=</HashCode>
+      <FileName>App_Code\cCenter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cCompany" Collapsed="true">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAGgQiIAABAIRAEAEAwUJUAYAACiAAgAhCgAUAA=</HashCode>
+      <FileName>App_Code\cCompany.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cDBManager" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAADAAQAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cDBManager.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cEmail" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIQAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cEmail.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cEmployee" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEYBuAEAQAgAAAgAFATgKCQAACAYCAIIC8ICAEQGgAM=</HashCode>
+      <FileName>App_Code\cEmployee.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cEmployer" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAsAAAAAAAAAAAAAQAKAAAAAAAAAAAAgIAAEQGCAE=</HashCode>
+      <FileName>App_Code\cEmployer.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cFeedback" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>App_Code\cFeedback.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cGeoCoder" Collapsed="true">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAKAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>App_Code\cGeoCoder.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cHash" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>App_Code\cHash.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cIndustry" Collapsed="true">
+    <Position X="15.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cIndustry.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cIpDetails" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICgAIAECAkACgAEAAAABAhAAIAEEAAAAAECQCAkAAg=</HashCode>
+      <FileName>App_Code\cIpDetails.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cJob" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAECEghAIkUkQAkxQgAhEgQAAAgAQhACjgAEAEIgA=</HashCode>
+      <FileName>App_Code\cJob.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cJobHistory" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAQFEgiAAgAGQAAQAiAgAgAAAAAASBAAAAAEAE0AA=</HashCode>
+      <FileName>App_Code\cJobHistory.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cJobManagement" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAABAAg=</HashCode>
+      <FileName>App_Code\cJobManagement.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cJobRequestTo" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQgEAQAEAAQACAIAAAAAAAAAgAEAAAACAAAIBA=</HashCode>
+      <FileName>App_Code\cJobRequestTo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cLogging" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>App_Code\cLogging.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cMessageManagement" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAQCAAAAAACAAAAAAABABAAAAAQAAAIAAAAA=</HashCode>
+      <FileName>App_Code\cMessageManagement.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cMessages" Collapsed="true">
+    <Position X="1.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQIAAAEQEAYABAACAIAAAAAAAAAQAAIEAQAAKCAAAAA=</HashCode>
+      <FileName>App_Code\cMessages.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cMessageToUser" Collapsed="true">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAgAAkAAAEQAAAAAgBUAAAAABAAEAUAAAACQAEAAA=</HashCode>
+      <FileName>App_Code\cMessageToUser.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cMessageType" Collapsed="true">
+    <Position X="4.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cMessageType.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cOccupation" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cOccupation.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cPreferredJob" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cPreferredJob.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cQualification" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AANQAAEABgAAYAACgCAAAAAAAAAAAAAAAJAAAAAAQAA=</HashCode>
+      <FileName>App_Code\cQualification.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cRegional" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAIQAIAABAAQAACCgAAAQAAAAGAAAEBBAAAAA=</HashCode>
+      <FileName>App_Code\cRegional.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cReview" Collapsed="true">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAABAAAAAAAAAAABAAAAhAAQAAEAAgEAAAKAAEAII=</HashCode>
+      <FileName>App_Code\cReview.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleObject" Collapsed="true">
+    <Position X="15" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgAIBACAgBAAAQADBEBASBAADAQFBAAggAICBIA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePoint" Collapsed="true">
+    <Position X="16.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAACEAQoCCCoANJBgxEQCAAGAGCAAAAAGgAICA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePoints" Collapsed="true">
+    <Position X="18.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAAAAAAAAAAiAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePolyline" Collapsed="true">
+    <Position X="15" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAIAAAgAQAgEBgAEAACBAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePolylines" Collapsed="true">
+    <Position X="16.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoogleMapType" Collapsed="true">
+    <Position X="13.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cCommon" Collapsed="true">
+    <Position X="11.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAAAAAAAAIAAQAQAAggAAAAAAAQAAAAAAAw=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePolygon" Collapsed="true">
+    <Position X="20.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAIgAEAAAAgEAEgABAECCAEAAAAAAAAAAAAAgAAAE=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GooglePolygons" Collapsed="true">
+    <Position X="13.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\CS_Classes\cGoogleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GService" Collapsed="true">
+    <Position X="18.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAABA=</HashCode>
+      <FileName>App_Code\CS_Classes\GService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cSystemAdmin" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cSystemAdmin.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cTicket" Collapsed="true">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAIgFAAEAAAAAAAABQAAAAAEAAABiAAAAAA=</HashCode>
+      <FileName>App_Code\cTicket.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cTicketManagment" Collapsed="true">
+    <Position X="8.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAgAQAAAAgCACAAAAAAAAAAAhAAAAAEAAAAAEgAAAA=</HashCode>
+      <FileName>App_Code\cTicketManagment.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cUser" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEBECAFiEIwIsCAAslBUAIUKMIUgUAAgQgjjAAKA=</HashCode>
+      <FileName>App_Code\cUser.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cUserLogin" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\cUserLogin.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cUserRegistration" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAQAAAACEAAAAAAAAABAAAEAAAACEAAAAAAg=</HashCode>
+      <FileName>App_Code\cUserRegistration.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RadixAjaxControls.cHTMLEditor" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>App_Code\cHTMLEditor.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

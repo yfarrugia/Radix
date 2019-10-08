@@ -1,0 +1,23 @@
+﻿Version	Build	Description
+1.0		27		Fixed Employer Registration loading screen issue
+		
+1.0		30		Removed some fields from "view all logs" query
+				Fixed typo in logging
+				Changed reported review checkbox to image [myreviews]
+				Added Account disable Image [viewallusers]
+				Changed boolean to gender type viewallusers]
+				Removed header [viewallusers]
+				Fixed tooltips [viewallusers]
+				fixed pending report tooltip [Employee]
+				added images to latest reviews
+				fixed bug when no jobs are available for review
+		
+1.0		31		Added the vacancies section [system]
+		
+1.0		33		fixed some registration errors - SQL errors and invalid returns
+
+1.0		34		Updated Registration process
+				fixed 'cannot convert to string' ex [employee]
+				Updated menu [master]
+				fixed issue populating gridview with no returned records
+				Correct Master pages ok cancle subecription page

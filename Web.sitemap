@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!--ANONYMOUS-->
+  <siteMapNode url="~/Default.aspx" title="Home"  description="">
+    <siteMapNode url="~/AllUsers/AboutUs.aspx" title="About Us"  description=""/>
+    <siteMapNode url="~/AllUsers/Feedback.aspx" title="Feedback"  description=""/>
+    <siteMapNode url="~/AllUsers/Statistics.aspx" title="Statistics"  description=""/>
+    <siteMapNode url="~/AllUsers/ContactUs.aspx" title="Contact Us"  description=""/>
+    <siteMapNode url="~/AllUsers/SiteMap.aspx" title="Site Map"  description=""/>
+    <siteMapNode url="~/FindCenters.aspx" title="Our Centers"  description=""/>
+    <siteMapNode url="~/Anonymous/Registration.aspx" title="User Registration"  description="">
+      <siteMapNode url="~/Anonymous/EmployeeRegistration.aspx" title="Employee Registration"  description=""/>
+      <siteMapNode url="~/Anonymous/EmployerRegistration.aspx" title="Employer Registration"  description=""/>
+      <siteMapNode url="~/Anonymous/CenterRegistration.aspx" title="Center Registration"  description=""/>
+      <siteMapNode url="~/Anonymous/UserAuth.aspx" title="User Authentication"  description=""/>
+    </siteMapNode>
+
+    <!--EMPLOYEE-->
+    <siteMapNode url="~/Employees/Employee.aspx" title="My Desk"  description="">
+      <siteMapNode url="~/Employees/JobRequestInbox.aspx" title="Job Request Inbox"  description="">
+        <siteMapNode url="~/AllRegisteredUsers/JobRequestDetails.aspx" title="Job Request Details"  description=""/>
+      </siteMapNode>
+      <siteMapNode url="~/Employees/MyReviews.aspx" title="My Job Reviews"  description=""/>
+      <siteMapNode url="~/AllRegisteredUsers/MessageInbox.aspx" title="Message Inbox"  description="">
+        <siteMapNode url="~/AllRegisteredUsers/Message.aspx" title="View Message"  description=""/>
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="" title="My Profile"  description="">
+      <siteMapNode url="~/AllRegisteredUsers/UserProfile.aspx" title="My Account"  description=""/>
+      <siteMapNode url="~/AllRegisteredUsers/CancelSubscribtion.aspx" title="Cancel Account"  description=""/>
+    </siteMapNode>
+
+    <siteMapNode url="" title="My Curricullum Vitae"  description="">
+      <siteMapNode url="~/Employees/UpdateCV.aspx" title="Update"  description=""/>
+    </siteMapNode>
+    
+    <!--EMPLOYER-->
+    <siteMapNode url="~/Employers/Employer.aspx" title="My Office"  description="">
+      <siteMapNode url="~/Employers/CreateJob.aspx" title="Create Job Posting"  description=""/>
+      <siteMapNode url="~/Employers/MyPendingJobs.aspx" title="Pending Jobs"  description="">
+        <siteMapNode url="~/Employers/Jobdetails.aspx" title="Job Details"  description="">
+          <siteMapNode url="~/Employers/AddEmployeeToJob.aspx" title="Associate Employee"  description=""/>
+          <siteMapNode url="~/Employers/ManageEmployees.aspx" title="Manage Employee"  description=""/>
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Employers/RunningJobs.aspx" title="Active Jobs"  description=""/>
+      <siteMapNode url="~/Employers/ReviewJobs.aspx" title="Finished Jobs"  description="">
+        <siteMapNode url="~/Employers/ReviewJobDetails.aspx" title="Review Job Details"  description="">
+          <siteMapNode url="~/Employers/AddReview.aspx" title="Add Job Review"  description=""/>    
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/AllRegisteredUsers/CreateMessage.aspx" title="Compose Message"  description=""/>
+      <siteMapNode url="~/Employers/JobHistory.aspx" title="Job History"  description=""/>
+    </siteMapNode>
+
+    <!--CENTER ADMIN-->
+    <siteMapNode url="~/CenterAdmin/CenterAdmin.aspx" title="My Desk"  description="">
+      <siteMapNode url="~/CenterAdmin/ViewCenterEmployees.aspx" title="Center Associated Employees"  description="">
+        <siteMapNode url="~/CenterAdmin/EmplyeeMessageInbox.aspx" title="Message Inbox"  description=""/>
+        <siteMapNode url="~/CenterAdmin/ReportUser.aspx" title="Report User"  description=""/>
+      </siteMapNode>
+      <siteMapNode url="~/CenterAdmin/AddEmployee.aspx" title="Add Center Employee"  description=""/>
+      <siteMapNode url="~/Employsers/MyPendingJobs1.aspx" title="Pending Jobs"  description="">
+      </siteMapNode>
+      <siteMapNode url="~/CenterAdmin/WebsiteManagement.aspx" title="Center Webpage Management"  description=""/>
+      <siteMapNode url="~/CenterAdmin/CenterProfile.aspx" title="Center Profile"  description="">
+        <siteMapNode url="~/CenterAdmin/AddCenterAdmin.aspx" title="Add Administrator Profile"  description=""/>
+      </siteMapNode>    
+    </siteMapNode>
+    
+    <!--SYSTEM-->
+    <siteMapNode url="~/System/SystemDefault.aspx" title="My Desk"  description="">
+      
+      <!--SYSTEM ADMIN-->
+      <siteMapNode url="" title="Administration"  description="">
+        <siteMapNode url="" title="System Accounts"  description="">
+          <siteMapNode url="~/System/Admin/CreateSystemAccount.aspx" title="Create Account"  description=""/>
+          <siteMapNode url="~/System/Admin/ManageAdmins.aspx" title="System Adminstrators"  description=""/>
+          <siteMapNode url="~/System/Admin/ManageSupport.aspx" title="System Support Users"  description=""/>
+        </siteMapNode>
+
+        <siteMapNode url="" title="Manage Flags"  description="">
+          <siteMapNode url="~/System/Admin/FlaggedUsers.aspx" title="Moderate Flagged Users"  description=""/>
+          <siteMapNode url="~/System/Admin/ModerateReviews.aspx" title="Moderate Flagged Reviews"  description=""/>
+        </siteMapNode>
+
+        <siteMapNode url="" title="Pending Activation"  description="">
+          <siteMapNode url="~/System/Admin/PendingCompanies.aspx" title="Companies Pending Activation"  description=""/>
+          <siteMapNode url="~/System/Admin/PendingCenters.aspx" title="Centers Pending Activation"  description=""/>
+        </siteMapNode>
+
+        <siteMapNode url="~/System/Admin/ApprovedCountries.aspx" title="Approved Countries"  description=""/>
+      </siteMapNode>
+
+      <siteMapNode url="" title="Support"  description="">
+        <siteMapNode url="~/System/Admin/EscalatedTickets.aspx" title="Ticket Management"  description=""/>
+        <siteMapNode url="~/System/TicketHistory.aspx" title="Ticket History"  description=""/>
+      </siteMapNode>
+
+      <siteMapNode url="" title="System"  description="">
+        <siteMapNode url="~/System/Admin/ViewAllUsers.aspx" title="All System Users"  description=""/>
+        <siteMapNode url="~/System/Admin/ViewLogs.aspx" title="System Logs"  description=""/>
+      </siteMapNode>
+
+      <!--SYSTEM SUPPORT-->
+      <siteMapNode url="" title="Support"  description="">
+        <siteMapNode url="~/System/Support/TicketManagement.aspx" title="Ticket Management"  description=""/>
+        <siteMapNode url="~/System/Support/ViewAllTickets.aspx" title="All Open Tickets"  description=""/>
+      </siteMapNode>
+      
+      
+    </siteMapNode>
+
+   
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,507 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title>Radix Systems</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
+    <style type="text/css">
+        .style1
+        {
+            width: 203px;
+        }
+        .style2
+        {
+            width: 123px;
+        }
+        .style3
+        {
+        }
+        .style4
+        {
+            height: 41px;
+        }
+        .style5
+        {
+            height: 41px;
+            width: 168px;
+        }
+        .style6
+        {
+            height: 22px;
+        }
+        </style>
+</head>
+<body bgcolor="#606a79" class="BackgroundOverlay">
+    <form id="form1" runat="server">
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+   <td width="100%" height="100%" align="center" valign="top" scope="col">
+    <table style="width: 912px" border="0" cellpadding="0" cellspacing="0">
+     <tr>
+      <td align="center" class="TopCurveBackground" height="14">
+      </td>
+     </tr>
+    </table>
+    <table width="912" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+      <tr>
+        <td scope="col"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td scope="col">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" 
+                    style="height: 88px" class="TopGradientBackground ">
+              <tr>
+                <td width="4%" scope="col" rowspan="2">
+                    &nbsp;</td>
+                <td width="54%" scope="col" align="left" rowspan="2">
+                    <asp:ImageButton ID="ImageButton6" runat="server" AlternateText="Radix Systems" 
+                        ImageUrl="~/Images/RadixLogo.png" PostBackUrl="~/Default.aspx" 
+                        ToolTip="Radix Systems" />
+                </td>
+                <td width="42%" scope="col" valign="top">
+                    <table style="width:80%;" align="right">
+                        <tr>
+                            <td class="style3" align="right" colspan="2">
+&nbsp;<asp:LinkButton ID="lnkContact0" runat="server" CssClass="Link" PostBackUrl="~/AllUsers/Feedback.aspx" 
+                                    ToolTip="Feedback">Feedback</asp:LinkButton>
+&nbsp;|&nbsp;<asp:LinkButton ID="lnkContact" runat="server" CssClass="Link" 
+                                    PostBackUrl="~/AllUsers/ContactUs.aspx">Contact Us</asp:LinkButton>
+&nbsp;|&nbsp;<asp:LinkButton ID="lnkSiteMap" runat="server" CssClass="Link" 
+                                    PostBackUrl="~/AllUsers/SiteMap.aspx">Site Map</asp:LinkButton>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="style5" align="right" valign="bottom">
+                                <asp:ImageButton ID="ImageButton1" runat="server" 
+                                    ImageUrl="~/Images/Flags/gb.png" />
+&nbsp;<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/Flags/it.png" />
+&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Images/Flags/fr.png" />
+&nbsp;<asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/Flags/de.png" />
+&nbsp;<asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/Images/Flags/es.png" style="width: 16px" />
+                            </td>
+                            <td align="left" class="style4" valign="bottom">
+                                &nbsp;<asp:DropDownList ID="DropDownList1" runat="server" Width="113px" 
+                                    CssClass="Link">
+                                    <asp:ListItem>English</asp:ListItem>
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+          &nbsp;</td>
+                        </tr>
+                    </table>
+                    <br />
+                  </td>
+              </tr>
+              <tr>
+                <td width="42%" scope="col" valign="bottom">
+                    
+                  </td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>
+                <asp:MultiView ID="MenuView" runat="server">
+                    <asp:View ID="EmployeeView" runat="server">
+                        <asp:Menu ID="mnuEmployee" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" DynamicVerticalOffset="5" Font-Bold="True" 
+                            Font-Underline="False" ForeColor="White" Orientation="Horizontal" 
+                            StaticSubMenuIndent="" Width="100%">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle BackColor="White" BorderStyle="None" Font-Bold="True" 
+                                ForeColor="#414D61" Height="15px" HorizontalPadding="15px" 
+                                VerticalPadding="2px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Home" 
+                                    Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Employees/Employee.aspx" Text="My Desk" 
+                                    ToolTip="My Desk" Value="My Desk"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/UserProfile.aspx" 
+                                    Text="My Profile" ToolTip="My Profile" Value="My Profile"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                    NavigateUrl="~/AllUsers/AboutUs.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FindCenters.aspx" Text="Our Centers" 
+                                    ToolTip="Our Centers" Value="Our Centers"></asp:MenuItem>
+                                <asp:MenuItem Text="Statistics" ToolTip="Statistics" Value="Statistics" 
+                                    NavigateUrl="~/AllUsers/Statistics.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/CreateTicket.aspx" 
+                                    Text="Support" ToolTip="Support" Value="Support"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                    <asp:View ID="CenterView" runat="server">
+                        <asp:Menu ID="mnuCenter" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" DynamicVerticalOffset="5" Font-Bold="True" 
+                            Font-Underline="False" ForeColor="White" Orientation="Horizontal" 
+                            StaticSubMenuIndent="" Width="100%">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle BackColor="White" BorderStyle="None" Font-Bold="True" 
+                                ForeColor="#414D61" Height="15px" HorizontalPadding="15px" 
+                                VerticalPadding="2px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Home" 
+                                    Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CenterAdmin/CenterAdmin.aspx" Text="My Desk" 
+                                    ToolTip="My Desk" Value="My Desk"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/UserProfile.aspx" 
+                                    Text="My Profile" ToolTip="My Profile" Value="My Profile"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CenterAdmin/WebsiteManagement.aspx" 
+                                    Text="Manage Website" ToolTip="Manage Website" Value="Manage Website">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                    NavigateUrl="~/AllUsers/AboutUs.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FindCenters.aspx" Text="Our Centers" 
+                                    ToolTip="Our Centers" Value="Our Centers"></asp:MenuItem>
+                                <asp:MenuItem Text="Statistics" ToolTip="Statistics" Value="Statistics" 
+                                    NavigateUrl="~/AllUsers/Statistics.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/CreateTicket.aspx" 
+                                    Text="Support" ToolTip="Support" Value="Support"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                    <asp:View ID="EmployerView" runat="server">
+                        <asp:Menu ID="mnuEmployer" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" Font-Bold="True" Font-Underline="False" ForeColor="White" 
+                            Orientation="Horizontal" StaticSubMenuIndent="" Width="100%" 
+                            DynamicVerticalOffset="5">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" 
+                                BackColor="White" BorderStyle="None" Font-Bold="True" ForeColor="#414D61" 
+                                Height="15px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx" 
+                                    ToolTip="Home">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="My Office" Value="My Office" 
+                                    NavigateUrl="~/Employers/Employer.aspx" ToolTip="My Office"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/UserProfile.aspx" 
+                                    Text="My Profile" ToolTip="My Profile" Value="My Profile"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" Value="About Us" ToolTip="About Us" 
+                                    NavigateUrl="~/AllUsers/AboutUs.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Our Centers" Value="Our Centers" 
+                                    NavigateUrl="~/FindCenters.aspx" ToolTip="Our Centers">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Statistics" Value="Statistics" ToolTip="Statistics" 
+                                    NavigateUrl="~/AllUsers/Statistics.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllRegisteredUsers/CreateTicket.aspx" 
+                                    Text="Support" ToolTip="Support" Value="Support"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                    <asp:View ID="SystemAdminView" runat="server">
+                        <asp:Menu ID="mnuAdmin" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" DynamicVerticalOffset="5" Font-Bold="True" 
+                            Font-Underline="False" ForeColor="White" Orientation="Horizontal" 
+                            StaticSubMenuIndent="" Width="100%">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle BackColor="White" BorderStyle="None" Font-Bold="True" 
+                                ForeColor="#414D61" Height="15px" HorizontalPadding="15px" 
+                                VerticalPadding="2px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Home" 
+                                    Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/System/SystemDefault.aspx" 
+                                    Text="Administration Panel" ToolTip="Administration Panel" 
+                                    Value="Administration Panel"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                    NavigateUrl="~/AllUsers/AboutUs.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FindCenters.aspx" Text="Our Centers" 
+                                    ToolTip="Our Centers" Value="Our Centers"></asp:MenuItem>
+                                <asp:MenuItem Text="Statistics" ToolTip="Statistics" Value="Statistics" 
+                                    NavigateUrl="~/AllUsers/Statistics.aspx">
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                    <asp:View ID="SystemSupportView" runat="server">
+                        <asp:Menu ID="mnuSupport" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" DynamicVerticalOffset="5" Font-Bold="True" 
+                            Font-Underline="False" ForeColor="White" Orientation="Horizontal" 
+                            StaticSubMenuIndent="" Width="100%">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle BackColor="White" BorderStyle="None" Font-Bold="True" 
+                                ForeColor="#414D61" Height="15px" HorizontalPadding="15px" 
+                                VerticalPadding="2px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Home" 
+                                    Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/System/SystemDefault.aspx" Text="Support Panel" 
+                                    ToolTip="Support Panel" Value="Support Panel"></asp:MenuItem>
+                                <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                    NavigateUrl="~/AllUsers/AboutUs.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FindCenters.aspx" Text="Our Centers" 
+                                    ToolTip="Our Centers" Value="Our Centers"></asp:MenuItem>
+                                <asp:MenuItem Text="Statistics" ToolTip="Statistics" Value="Statistics" 
+                                    NavigateUrl="~/AllUsers/Statistics.aspx">
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                    <asp:View ID="AllUserView" runat="server">
+                        <asp:Menu ID="mnuAllUser" runat="server" CssClass="Menu" 
+                            DynamicHorizontalOffset="50" Font-Bold="True" Font-Underline="False" ForeColor="White" 
+                            Orientation="Horizontal" StaticSubMenuIndent="" Width="100%" 
+                            DynamicVerticalOffset="5">
+                            <StaticMenuItemStyle VerticalPadding="2px" />
+                            <DynamicHoverStyle ForeColor="#92C62E" />
+                            <DynamicMenuStyle BorderColor="#505C6D" BorderStyle="Solid" BorderWidth="1px" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="2px" 
+                                BackColor="White" BorderStyle="None" Font-Bold="True" ForeColor="#414D61" 
+                                Height="15px" />
+                            <StaticHoverStyle ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx" 
+                                    ToolTip="Home">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllUsers/AboutUs.aspx" Text="About Us" ToolTip="About Us" 
+                                    Value="About Us"></asp:MenuItem>
+                                <asp:MenuItem Text="Our Centers" ToolTip="Our Centers" Value="Our Centers" 
+                                    NavigateUrl="~/FindCenters.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AllUsers/Statistics.aspx" Text="Statistics" 
+                                    ToolTip="Statistics" Value="Statistics"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </asp:View>
+                </asp:MultiView>
+              </td>
+          </tr>
+          <tr>
+            <td height="179" class="BannerBackground"><table width="100%" height="179" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="72%" height="140" scope="col">&nbsp;</td>
+                <td width="28%" class="LoginBackground" scope="col" align="left" 
+                      valign="middle">
+                    <asp:Table id="tblLogin" style="width:100%;" runat=server>
+                        <asp:TableRow>
+                            <asp:TableCell align="left" colspan="2" height="40">
+                                    &nbsp;&nbsp;<asp:Label ID="Label1" runat="server" CssClass="TextTitle" Font-Bold="False" 
+                                    ForeColor="White" Text="Have an account?"></asp:Label>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell align="right">
+                                <asp:Label ID="lblUsername" runat="server" CssClass="Text" Font-Bold="False" 
+                                    ForeColor="White" Text="Username:"></asp:Label>
+                            </asp:TableCell>
+                            <asp:TableCell align="left">
+                                <asp:TextBox ID="txtUsername" runat="server" BorderColor="#606A79" 
+                                    BorderStyle="Solid" BorderWidth="1px" Width="150px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="UsernameValidator" runat="server" 
+                                    ControlToValidate="txtUsername" ErrorMessage="*" ValidationGroup="1"></asp:RequiredFieldValidator>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell align="right">
+                                <asp:Label ID="lblPassword" runat="server" CssClass="Text" Font-Bold="False" 
+                                    ForeColor="White" Text="Password:"></asp:Label>
+                            </asp:TableCell>
+                            <asp:TableCell align="left">
+                                <asp:TextBox ID="txtPassword" runat="server" BorderColor="#606A79" 
+                                    BorderStyle="Solid" BorderWidth="1px" TextMode="Password" Width="150px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                                    ControlToValidate="txtPassword" ErrorMessage="*" ValidationGroup="1"></asp:RequiredFieldValidator>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell align="right">
+                                &nbsp;</asp:TableCell>
+                            <asp:TableCell align="left">
+                                <asp:CheckBox ID="chkRemember" runat="server" CssClass="Text" ForeColor="LightGray" 
+                                    Text="Remember me" />
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell align="right">
+                                &nbsp;</asp:TableCell>
+                            <asp:TableCell align="left">
+                                <asp:Label ID="lblInvalidUser" runat="server" CssClass="Text" Font-Bold="False" 
+                                    ForeColor="Red" Text="Invalid Username or Password"></asp:Label>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell class="style1" colspan="2" valign="top">
+                                <asp:Table ID="Table1" style="width:168px;" align="right" runat=server>
+                                    <asp:TableRow>
+                                        <asp:TableCell>
+                                            <asp:Button ID="btnSignIn" runat="server" BackColor="#2C3748" BorderColor="Black" 
+                                                BorderStyle="Solid" BorderWidth="1px" CssClass="Text" EnableTheming="True" 
+                                                ForeColor="White" Height="22px" Text="Sign In" Width="64px" 
+                                                ValidationGroup="1"/>
+                                        </asp:TableCell>
+                                        <asp:TableCell>
+                                            <asp:Button ID="btnRegister" runat="server" BackColor="#094875" 
+                                                BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" CssClass="Text" 
+                                                EnableTheming="True" ForeColor="White" Height="22px" Text="Register" 
+                                                Width="64px" PostBackUrl="~/Anonymous/Registration.aspx" />
+                                        </asp:TableCell>
+                                    </asp:TableRow>
+                                </asp:Table>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                   <asp:Table id="tblLoggedIn" style="width: 100%; height: 60px;" runat="server">
+                        <asp:TableRow>
+                            <asp:TableCell align="left" class="style2" ColumnSpan="2">
+                                &nbsp&nbsp
+                                <asp:Label ID="lblWelcome" runat="server" CssClass="TextTitle" 
+                                    ForeColor="White" Text="Hello,"></asp:Label>&nbsp
+                                    <asp:Label ID="lblName" runat="server" CssClass="TextTitle" 
+                                    ForeColor="White" Text="User's Name"></asp:Label>
+                                    <asp:Label ID="Label3" runat="server" CssClass="Text" 
+                                    Font-Italic="true" ForeColor="White" Text=" ("></asp:Label>
+                                <asp:LoginName ID="LoginName1" runat="server" CssClass="Text" 
+                                    Font-Italic="true" ForeColor="White" />
+                                    <asp:Label ID="Label4" runat="server" CssClass="Text" 
+                                    Font-Italic="true" ForeColor="White" Text=")"></asp:Label>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell align="left" class="style2" ColumnSpan="2">
+                                &nbsp&nbsp
+                                <asp:Label ID="lblUserType" runat="server" CssClass="Text" 
+                                    ForeColor="#d7d7d7" Text="User's Type"></asp:Label> 
+                                <br />
+                                &nbsp&nbsp
+                                <asp:Label ID="lblUserCountry" runat="server" CssClass="Text" 
+                                    ForeColor="#d7d7d7"  Text="Malta"></asp:Label>
+                            </asp:TableCell>
+                        </asp:TableRow>
+<%--                        <asp:TableRow>
+                            <asp:TableCell align="left" class="style2" ColumnSpan="2">
+                                &nbsp&nbsp
+                                <asp:Label ID="lblUserCountry" runat="server" CssClass="Text" 
+                                    ForeColor="LightGray"  Text="Malta"></asp:Label>&nbsp
+                            </asp:TableCell>
+                        </asp:TableRow>--%>
+                    <asp:TableRow>
+                  <asp:TableCell class="style2" Height="50">&nbsp;</asp:TableCell>
+                  <asp:TableCell valign="bottom" align="center">
+                  <asp:Button ID="btnSignOut" runat="server" BackColor="#2C3748" BorderColor="Black" 
+                BorderStyle="Solid" BorderWidth="1px" CssClass="Text" EnableTheming="True" 
+                ForeColor="White" Height="22px" Text="Sign Out" Width="64px" 
+                ValidationGroup="1" />
+                  </asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+                  </td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="100%">
+                <div align="left">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+                        <tr>
+                            <td class="SitePathBackground" height="57" valign="top">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td class="style6">
+                                            &nbsp&nbsp <asp:SiteMapPath ID="SiteMapPath2" runat="server" Font-Names="Verdana" 
+                        Font-Size="X-Small" PathSeparator=" : ">
+                        <PathSeparatorStyle Font-Bold="True" ForeColor="#666666" />
+                                    <CurrentNodeStyle CssClass="currentnode" />
+                        <NodeStyle Font-Bold="True" CssClass="node" />
+                        <RootNodeStyle Font-Bold="True" CssClass="rootnode" />
+                    </asp:SiteMapPath>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+    </div>
+    </td>
+          </tr>
+        </table>
+        
+
+</td>
+      </tr>
+    </table>
+    <table style="width: 913px; height: 81px;" class="BlueText">
+    <tr>
+    <td align="center" class="PageBottomShadow" height="60" valign="middle">
+                    <table style="width:100%;">
+                        <tr>
+                            <td align="center" class="GrayText">
+                                <asp:LinkButton ID="lnkTerms" runat="server" CssClass="Link" ForeColor="White">Terms 
+                                &amp; Conditions</asp:LinkButton>
+&nbsp;|
+                                <asp:LinkButton ID="lnkPrivacy" runat="server" CssClass="Link" 
+                                    ForeColor="White">Privacy Policy</asp:LinkButton>
+&nbsp;|
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="Link" 
+                                    ForeColor="White">Help</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                    <asp:Label ID="Label2" runat="server" CssClass="Text" ForeColor="Silver" 
+                        Text="Copyrights Radix Systems 2009. All Rights Reserved."></asp:Label>
+                                <br />
+                    <asp:Label ID="lblVersion" runat="server" CssClass="Text" ForeColor="Silver" 
+                        Text=""></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+    </td>
+    </tr>
+        </table>
+                    <br />
+                    <%--                        <asp:TableRow>
+                            <asp:TableCell align="left" class="style2" ColumnSpan="2">
+                                &nbsp&nbsp
+                                <asp:Label ID="lblUserCountry" runat="server" CssClass="Text" 
+                                    ForeColor="LightGray"  Text="Malta"></asp:Label>&nbsp
+                            </asp:TableCell>
+                        </asp:TableRow>--%>
+    </form>
+</body>
+</html>
