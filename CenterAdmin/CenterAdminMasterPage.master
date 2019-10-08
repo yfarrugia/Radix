@@ -1,0 +1,117 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="CenterAdminMasterPage.master.vb" Inherits="CenterAdmin_CenterAdminMasterPage" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <table style="width:100%;">
+        <tr>
+            <td width="20%" align="left" class="GreenTextBold" valign="bottom" colspan="1">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblNavigation" runat="server" CssClass="BlueTextLightBold" 
+                    Text="Navigation" ForeColor="#666666"></asp:Label>
+            </td>
+            <td align="right" valign= "top">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" class="NewMessagesLeft" height="30" valign="middle" 
+                                        width="15">
+                                    </td>
+                                    <td align="center" class="NewMessagesBackground" valign="middle" width="130px">
+                                        <table width="100%">
+                                            <tr>
+                                                <td>
+                                                    &nbsp;<asp:Label ID="lblNumMsg" runat="server" CssClass="DarkBlueText" Text="0"></asp:Label>
+                                                    &nbsp;<asp:Label ID="lblNewMsg" runat="server" CssClass="DarkBlueText" 
+                                                        Text="New Message(s)"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="center" class="NewMessagesBackground" height="30" valign="middle" 
+                                        width="15">
+                                        <asp:ImageButton ID="imgRefresh" runat="server" 
+                                            ImageUrl="~/Images/Icons/Refresh.png" style="height: 15px" />
+                                    </td>
+                                    <td align="center" class="NewMessagesRight" height="30" valign="middle" 
+                                        width="15">
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+              
+               
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                </td>
+            <td width="1%">
+                </td>
+        </tr>
+        <tr>
+            <td width="20%" valign="top" class="NavigationBackground" height="100%" style="padding-left:5px;">
+            <br />
+                <asp:TreeView ID="TreeView1" runat="server" NodeIndent="25" 
+                    ShowExpandCollapse="False">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="False" Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="False" CssClass="BlueTextBold" 
+                        Font-Bold="True" Font-Italic="False" />
+                    <Nodes>
+                        <asp:TreeNode Text="My Desk" Value="My Desk" 
+                            ImageUrl="~/Images/Icons/MyOffice.png" 
+                            NavigateUrl="~/CenterAdmin/CenterAdmin.aspx" ToolTip="My Desk">
+                            <asp:TreeNode Text="View All Employees" Value="View All Employees" 
+                                NavigateUrl="~/CenterAdmin/ViewCenterEmployees.aspx" 
+                                ImageUrl="~/Images/Icons/AllEmployees.png" ToolTip="View All Employees">
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Add Employee" Value="Add Employee" 
+                                ImageUrl="~/Images/Icons/AddEmployee.png" 
+                                NavigateUrl="~/CenterAdmin/AddEmployee.aspx" ToolTip="Add Employee">
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Messages" Value="Messages" 
+                                ImageUrl="~/Images/Icons/Mail.png" SelectAction="None" ToolTip="Messages">
+                                <asp:TreeNode NavigateUrl="~/AllRegisteredUsers/MessageInbox.aspx" Text="Inbox" 
+                                    Value="Inbox" ImageUrl="~/Images/Icons/MailInbox.png" ToolTip="Inbox"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/AllRegisteredUsers/CreateMessage.aspx" 
+                                    Text="Compose" Value="Compose" ImageUrl="~/Images/Icons/Compose.png" 
+                                    ToolTip="Compose"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="My Profile" Value="My Profile" 
+                            ImageUrl="~/Images/Icons/User.png" SelectAction="None" 
+                            ToolTip="My Profile">
+                            <asp:TreeNode Text="My Account" Value="My Account" 
+                                NavigateUrl="~/AllRegisteredUsers/UserProfile.aspx" 
+                                ImageUrl="~/Images/Icons/Folders.png" ToolTip="My Account"></asp:TreeNode>
+                            <asp:TreeNode Text="My Center" Value="My Center" 
+                                NavigateUrl="~/CenterAdmin/CenterProfile.aspx" 
+                                ImageUrl="~/Images/Icons/Center.png" ToolTip="My Center">
+                                <asp:TreeNode ImageUrl="~/Images/Icons/AddCenter.png" 
+                                    NavigateUrl="~/CenterAdmin/AddCenterAdmin.aspx" Text="Add Admin" 
+                                    ToolTip="Add Admin" Value="Add Admin"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode ImageUrl="~/Images/Icons/ManageWebsite.png" 
+                            NavigateUrl="~/CenterAdmin/WebsiteManagement.aspx" Text="Manage Webpage" 
+                            Value="Manage Webpage" ToolTip="Manage Webpage"></asp:TreeNode>
+                    </Nodes>
+                    <NodeStyle 
+                        HorizontalPadding="10px" NodeSpacing="0px" VerticalPadding="0px" 
+                        CssClass="Text" />
+                </asp:TreeView>
+            </td>
+            <td align="left" valign="top">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            <td width="1%">
+                &nbsp;</td>
+        </tr>
+        </table>
+<br />
+</asp:Content>
+

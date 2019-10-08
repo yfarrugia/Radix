@@ -1,0 +1,21 @@
+﻿<%@ Page Language="VB" MasterPageFile="~/CenterAdmin/CenterAdminMasterPage.master" AutoEventWireup="false" CodeFile="WriteContent.aspx.vb" Inherits="CenterAdmin_WriteContent" title="Untitled Page" %>
+
+<%@ Register Namespace = "RadixAjaxControls" TagPrefix="RadixControl" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat= "server">
+    <p>
+        <br />
+    </p>
+    
+    <p>
+    
+    <RadixControl:cHTMLEditor ID="Editor1" runat="server" Width="100%" Height="300px" />
+        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+</asp:Content>
+
